@@ -3,6 +3,8 @@
 
 # 1) 반복법으로 n! 계산
 def factorial_iter(n):
+    if n<0:
+        raise ValueError("정수(0 이상의 숫자)만 입력하세요.")
     result =1
     for k in range(2,n+1):
         result = result*k
@@ -13,7 +15,7 @@ def factorial_iter(n):
 def factorial_rec(n):
     # n이 0보다 작으면 오류 발생 
     if n < 0:
-        raise ValueError("팩토리얼은 음수에 대해 정의되지 않습니다.")
+        raise ValueError("정수(0 이상의 숫자)만 입력하세요.")
     
     # 0!과 1! = 1로 정의
     if n <= 1:
